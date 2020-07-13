@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+    <script src="https://unpkg.com/css/chai/chai.css"></script>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -12,17 +15,16 @@
 
 
 
-    <script src="https://unpkg.com/css/chai/chai.css"></script>
-    <script src="https://unpkg.com/mocha/mocha.js"></script>
-
+    
     <script class="mocha-init">
         mocha.setup('bdd');
         mocha.checkLeaks();
     </script>
 
     
-    <script src="radio-bill-test.js" charset="utf-8"></script>
     <script src="../radio-bill.js" charset="utf-8"></script> 
+    <script src="radio-bill-test.js" charset="utf-8"></script>
+   
     
     <script class="mocha-exec">
         mocha.run();
