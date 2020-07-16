@@ -14,13 +14,12 @@ describe("The radio button bill factory functions", function() {
 
         let radioBillFact = radioBill();
 
-        radioBillFact.TotalCalls ();
-        radioBillFact.TotalCalls ();
-        radioBillFact.TotalCalls ();
-        radioBillFact.TotalCalls ();
+        radioBillFact.theBillTotal ('call');
+        radioBillFact.theBillTotal ('call');
+        radioBillFact.theBillTotal ('call');
+        radioBillFact.theBillTotal ('call');
         
-        
-        assert.equal(0, radioBillFact.theOverallTotal())
+        assert.equal(11, radioBillFact.theOverallTotal())
         
     })
 
@@ -28,9 +27,9 @@ describe("The radio button bill factory functions", function() {
 
         let radioBillFact = radioBill();
 
-        radioBillFact.TotalSms ();
+        radioBillFact.theBillTotal ("sms");
 
-        assert.equal(0, radioBillFact.theOverallTotal())
+        assert.equal(0.85, radioBillFact.theOverallTotal())
         
     })
 
@@ -38,12 +37,13 @@ describe("The radio button bill factory functions", function() {
 
         let radioBillFact = radioBill();
 
-        radioBillFact.TotalSms ();
-        radioBillFact.TotalSms ();
-        radioBillFact.TotalSms ();
-        radioBillFact.TotalSms ();
+        radioBillFact.theBillTotal ("sms");
+        radioBillFact.theBillTotal ("sms");
+        radioBillFact.theBillTotal ("sms");
+        radioBillFact.theBillTotal ("sms");
+        radioBillFact.theBillTotal ("sms");
 
-        assert.equal(0, radioBillFact.theOverallTotal())
+        assert.equal(4.25, radioBillFact.theOverallTotal())
         
     })
 
@@ -51,16 +51,16 @@ describe("The radio button bill factory functions", function() {
 
         let radioBillFact = radioBill();
 
-        radioBillFact.TotalCalls ();
-        radioBillFact.TotalCalls ();
-        radioBillFact.TotalSms ();
+        radioBillFact.theBillTotal ("call");
+        radioBillFact.theBillTotal ("call");
+        radioBillFact.TotalSms ("sms");
 
-        assert.equal(0, radioBillFact.theOverallTotal())
+        assert.equal(5.5, radioBillFact.theOverallTotal())
         
     })
 
     describe("The Danger & Warning Level for Radio Button Bill", function() {
-        it ("should be able to return class name 'critical' when critical level is reached", function() {
+        it ("should be able to return class name 'danger' when critical level is reached", function() {
     
             let radioBillFact = radioBill();
     
@@ -68,9 +68,25 @@ describe("The radio button bill factory functions", function() {
             radioBillFact.theBillTotal('call');
             radioBillFact.theBillTotal('call');
             radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
     
-            assert.equal(11, radioBillFact.theOverallTotal())
-            assert.equal("critical", radioBillFact.totalClassName())
+            // assert.equal(11, radioBillFact.theOverallTotal())
+            assert.equal("danger", radioBillFact.totalClassName())
             
         })
 
@@ -80,8 +96,24 @@ describe("The radio button bill factory functions", function() {
     
             radioBillFact.theBillTotal('call');
             radioBillFact.theBillTotal('call');
-    
-            assert.equal(5.5, radioBillFact.theOverallTotal())
+            
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+            
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+
+            radioBillFact.theBillTotal('call');
+            radioBillFact.theBillTotal('call');
+
+
+            // assert.equal(5.5, radioBillFact.theOverallTotal())
             assert.equal("warning", radioBillFact.totalClassName())
             
         })

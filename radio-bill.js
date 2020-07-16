@@ -30,17 +30,17 @@ function radioBill() {
   }
    
   function CriticalLevel() {
-      return 10;
+      return 50;
   }
 
   function WarningLevel() {
-    return 5;
+    return 30;
 }
 
   function totalClassName(){
 
     if (theOverallTotal() >= CriticalLevel()) {
-        return "critical"
+        return "danger"
     }
 
     if (theOverallTotal() >= WarningLevel()) {
